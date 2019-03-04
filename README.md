@@ -160,6 +160,10 @@ how to use docker in spring cloud!
 
 ### 3.4 启动情况查看：
 
+#### 查看服务启动日志
+
+> docker logs `container-id`
+
 #### 服务列表
 
 > docker service ls
