@@ -14,13 +14,14 @@ how to use docker in spring cloud!
 > 5.测试系统，不考虑一些超时配置，实现演示目的即可。
 
 # 第二步：本机环境启动测试
-## 1.启动spring-cloud-eureka。
 
-## 2.启动spring-cloud-config。
+> 1.启动spring-cloud-eureka。
 
-## 3.启动spring-cloud-service-a、spring-cloud-service-b。
+> 2.启动spring-cloud-config。
 
-## 4.启动spring-cloud-zuul。
+> 3.启动spring-cloud-service-a、spring-cloud-service-b。
+
+> 4.启动spring-cloud-zuul。
 
 ### 测试步骤：
 
@@ -80,6 +81,10 @@ how to use docker in spring cloud!
 ### docker network create --driver `overlay` --subnet=`192.168.10.0/24` `springcloud-overlay`
 
 > 创建指定子网IP的overlay网络`springcloud-overlay`。
+
+### docker exec -it `container-id` /bin/sh
+
+> 执行linux命令，可以查看网卡情况ifconfig。
 
 ### docker network常见的一些指令：
 + `connect` 将某一个容器连接到网络中
