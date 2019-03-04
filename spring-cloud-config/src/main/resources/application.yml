@@ -1,0 +1,16 @@
+# 端口
+server:
+  port: 8888
+spring:
+  # 服务名称
+  application:
+    name: spring-cloud-config
+# 开放所有监控相关端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

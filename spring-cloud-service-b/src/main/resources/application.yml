@@ -1,0 +1,7 @@
+# 端口
+server:
+  port: 8802
+spring:
+  # 服务名称
+  application:
+    name: service-b

@@ -1,0 +1,7 @@
+# 端口
+server:
+  port: 8801
+spring:
+  # 服务名称
+  application:
+    name: service-a

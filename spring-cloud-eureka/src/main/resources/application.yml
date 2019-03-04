@@ -1,0 +1,18 @@
+# 端口
+server:
+  port: 8761
+spring:
+  # 服务名称
+  application:
+    name: spring-cloud-eureka
+## 注册中心配置 ##
+eureka:
+  # 实例名
+  instance:
+    hostname: ${EUREKA_HOSTNAME:localhost}
+  # 服务端
+  client:
+    register-with-eureka: ${EUREKA_REGISTER:false}
+    fetch-registry: ${EUREKA_REGISTER:false}
+    service-url:
+      defaultZone: ${EUREKA_SERVER_LIST:http://localhost:8761}
