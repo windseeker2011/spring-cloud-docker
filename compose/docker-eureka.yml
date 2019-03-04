@@ -1,0 +1,42 @@
+version: "3"
+services:
+  eureka1:
+    image: hub.c.163.com/windseeker2011/spring-cloud-eureka
+    networks:
+      springcloud-overlay:
+        aliases:
+          - eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      - EUREKA_HOSTNAME=eureka1
+      - EUREKA_REGISTER=true
+      - EUREKA_SERVER_LIST=http://eureka2:8761/eureka/,http://eureka3:8761/eureka/
+  eureka2:
+    image: hub.c.163.com/windseeker2011/spring-cloud-eureka
+    networks:
+      springcloud-overlay:
+        aliases:
+          - eureka-server
+    ports:
+      - "8762:8761"
+    environment:
+      - EUREKA_HOSTNAME=eureka2
+      - EUREKA_REGISTER=true
+      - EUREKA_SERVER_LIST=http://eureka1:8761/eureka/,http://eureka3:8761/eureka/
+  eureka3:
+    image: hub.c.163.com/windseeker2011/spring-cloud-eureka
+    networks:
+      springcloud-overlay:
+        aliases:
+          - eureka-server
+    ports:
+      - "8763:8761"
+    environment:
+      - EUREKA_HOSTNAME=eureka3
+      - EUREKA_REGISTER=true
+      - EUREKA_SERVER_LIST=http://eureka1:8761/eureka/,http://eureka2:8761/eureka/
+networks:
+  springcloud-overlay:
+    external:
+      name: springcloud-overlay

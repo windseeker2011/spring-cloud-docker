@@ -1,0 +1,15 @@
+version: "3"
+services:
+  config:
+    image: hub.c.163.com/windseeker2011/spring-cloud-config
+    networks:
+      - springcloud-overlay
+    ports:
+      - "8888"
+    environment:
+      - spring.cloud.inetutils.preferred-networks[0]=192.168
+      - EUREKA_SERVER_LIST=http://eureka-server:8761/eureka/
+networks:
+  springcloud-overlay:
+    external:
+      name: springcloud-overlay
