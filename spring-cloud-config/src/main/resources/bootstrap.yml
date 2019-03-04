@@ -14,26 +14,7 @@ spring:
     config:
       server:
         git:
-          default-label: test
+          default-label: master
           uri: https://git.dev.tencent.com/liweihai/spring-cloud-config.git
           username: null
           password: null
----
-# 演示环境配置文件
-spring:
-  profiles: demo
-  cloud:
-    config:
-      server:
-        git:
-          default-label: demo
-
-## 正式环境集群配置 ##
----
-spring:
-  profiles: production
-  cloud:
-    config:
-      server:
-        git:
-          default-label: pro
