@@ -19,6 +19,7 @@
 		<module>spring-cloud-config</module>
 		<module>spring-cloud-service-a</module>
 		<module>spring-cloud-service-b</module>
+		<module>spring-cloud-zuul</module>
 	</modules>
 
 	<properties>
