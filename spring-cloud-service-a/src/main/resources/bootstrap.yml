@@ -15,3 +15,7 @@ spring:
       discovery:
         enabled: true
         service-id: spring-cloud-config
+# feign支持hystrix
+feign:
+  hystrix:
+    enabled: true

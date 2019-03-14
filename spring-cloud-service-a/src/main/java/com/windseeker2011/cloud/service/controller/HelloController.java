@@ -17,4 +17,9 @@ public class HelloController {
 		return helloService.hello();
 	}
 
+	@GetMapping(value = "/haha")
+	public String haha() {
+		return "haha";
+	}
+
 }
