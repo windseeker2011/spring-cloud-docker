@@ -3,7 +3,7 @@ eureka:
   # 实例 ip+port
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
   # eureka服务地址
   client:
     service-url:
