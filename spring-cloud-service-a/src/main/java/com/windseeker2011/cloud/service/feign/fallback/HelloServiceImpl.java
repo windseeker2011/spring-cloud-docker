@@ -12,4 +12,9 @@ public class HelloServiceImpl implements HelloService {
 		return "[service a] hello";
 	}
 
+	@Override
+	public String timeout(long m) {
+		return m + " timeout";
+	}
+
 }
