@@ -16,5 +16,5 @@ spring:
         git:
           default-label: master
           uri: https://git.dev.tencent.com/liweihai/spring-cloud-config.git
-          username: null
-          password: null
+          username: dt_VFhQlr
+          password: zl5foj42JnKT0zK2GMDBlqMciEBrHi
